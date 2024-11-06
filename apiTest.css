@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.container {
+    border: solid;
+    width: 600px;
+    height: 496px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+#cities {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.Weather-info {
+    margin-top: 20px;
+}
+
+.city_date {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.city_name, .date {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.img_temp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.temp_info {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.week_weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.days {
+    height: 150px;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+}

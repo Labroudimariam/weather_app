@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="apiTest.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" /> -->
+</head>
+<body>
+    <div class="container">
+        <select id="cities">
+            <option value="" disabled selected>Choose a city</option>
+            <option value="34.008582,-6.854328">Rabat</option>
+            <option value="48.8566,2.3522">Paris</option>
+            <option value="35.646594,139.772384">Tokyo</option>
+            <option value="9.045608,7.495525">Abuja</option>
+            <option value="13.649408,100.534637">Bangkok</option>
+            <option value="59.905805,10.772060">Oslo</option>
+        </select>
+        <!-- <button id="my_position">My position</button> -->
+
+        <div class="Weather-info">
+            <div class="city_date">
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                <p class="city_name">Rabat</p>
+                </div>
+                <p class="date">06/11/2024</p>
+            </div>
+            <div class="img_temp">
+                <div class="img_weather">
+                    <img width="150px" src="sun2.png" alt="">
+                </div>
+                <div class="temp_info">
+                    <p class="temperature">22.8°C</p>
+                    <p class="description">Clear</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="week_weather">
+            <div class="days">
+                <p class="day">Monday</p>
+                <p class="day_img"><img width="50px" src="cloudy.png" alt=""></p>
+                <p class="day_temp">18°C</p>
+            </div>
+            <div class="days">
+                <p class="day">Monday</p>
+                <p class="day_img"><img width="50px" src="cloudy.png" alt=""></p>
+                <p class="day_temp">18°C</p>
+            </div>
+            <div class="days">
+                <p class="day">Monday</p>
+                <p class="day_img"><img width="50px" src="cloudy.png" alt=""></p>
+                <p class="day_temp">18°C</p>
+            </div>
+            <div class="days">
+                <p class="day">Monday</p>
+                <p class="day_img"><img width="50px" src="cloudy.png" alt=""></p>
+                <p class="day_temp">18°C</p>
+            </div>
+            <div class="days">
+                <p class="day">Monday</p>
+                <p class="day_img"><img width="50px" src="cloudy.png" alt=""></p>
+                <p class="day_temp">18°C</p>
+            </div>
+            <div class="days">
+                <p class="day">Monday</p>
+                <p class="day_img"><img width="50px" src="cloudy.png" alt=""></p>
+                <p class="day_temp">18°C</p>
+            </div>
+            <div class="days">
+                <p class="day">Monday</p>
+                <p class="day_img"><img width="50px" src="cloudy.png" alt=""></p>
+                <p class="day_temp">18°C</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="apiTest.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!-- https://youtu.be/MIYQR-Ybrn4?si=dCoxA4Ojfs8r6atA -->
