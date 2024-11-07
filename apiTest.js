@@ -1,10 +1,10 @@
 async function getWeatherData(coords) {
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${coords[0]}&longitude=${coords[1]}&current=temperature_2m,is_day,rain,cloud_cover,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min,rain_sum&timezone=auto`;
 
-
-    let resp = await axios.get(url);
-    let data = resp.data;
+    let response = await axios.get(url);
+    let data = response.data;
     console.log(data);
+    
 
     let is_day = data.current.is_day;
 
@@ -46,13 +46,7 @@ async function getWeatherData(coords) {
     );
 
 
-
-    let cityName = $("#cities option:selected").text();
-    $(".city_name").text(cityName);
-    $(".date").text(new Date().toLocaleDateString());
-
-
-    $(".week_weather .days").each((index, element) => {
+    $(".days").each((index, element) => {
         let day = new Date(data.daily.time[index]).toLocaleString('en', { weekday: 'long' });
         let maxTemp = data.daily.temperature_2m_max[index];
         let minTemp = data.daily.temperature_2m_min[index];
@@ -76,14 +70,17 @@ async function getWeatherData(coords) {
     });
 }
 
-$("#cities").on("change", async function () {
-    let coords = $(this).val().split(",");
+$("#cities").on("click", ".dropdown-item", function () {
+    const coords = $(this).data("coords").split(",");
+    const cityName = $(this).text().trim();
+    $(".city_name").text(cityName);
     getWeatherData(coords);
 });
 
 
-// $("#my_position").on("click", function() {
-//     navigator.geolocation.getCurrentPosition((position) => {
-//         getWeatherData([position.coords.latitude, position.coords.longitude]);
-//     });
-// });
+$("#my_position").on("click", function() {
+    navigator.geolocation.getCurrentPosition((position) => {
+        getWeatherData([position.coords.latitude, position.coords.longitude]);
+    });
+    $(".city_name").text("Agadir");
+});
